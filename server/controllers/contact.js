@@ -11,11 +11,14 @@ module.exports.displayContactList = (req, res, next) => {
         if(err)
             return console.error(err);
         else
+        {
             res.render('contact/list',{
                 title:'Contacts',
                 contactList:contactList,
                 username:req.user?req.user.username:""
             });
+        }
+            
     });
 };
 
